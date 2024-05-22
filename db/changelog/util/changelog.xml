@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <!--views-->
+    <include file="schema.sql" relativeToChangelogFile="true"/>
+    <include file="crawler_status.sql" relativeToChangelogFile="true"/>
+    <include file="vagabond_status.sql" relativeToChangelogFile="true"/>
+    <include file="uri_stats.sql" relativeToChangelogFile="true"/>
+
+    <!--functions-->
+    <include file="external_info.sql" relativeToChangelogFile="true"/>
+    <include file="file_info.sql" relativeToChangelogFile="true"/>
+    <include file="label_info.sql" relativeToChangelogFile="true"/>
+    <include file="url_info.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
+

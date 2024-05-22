@@ -1,0 +1,12 @@
+stages:
+  - prod
+
+run-prod:
+  stage: prod
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  tags:
+    - prod
+  script:
+    - source /home/gitlab-runner/db.config
+    - python3 runLiquibase.py
