@@ -22,7 +22,7 @@ public class FileDao {
         jdbcTemplate.batchUpdate(
                 """
                         with creating_files as (
-                            insert into vagabond.files
+                            insert into vagabond.file
                                 (url)
                             values
                                 (:url)
@@ -31,7 +31,7 @@ public class FileDao {
                         ), created_files as (
                             select
                                 id
-                            from vagabond.files
+                            from vagabond.file
                             where url in (:url)
                         )
                         insert into vagabond.url_file
